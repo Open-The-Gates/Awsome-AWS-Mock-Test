@@ -1,5 +1,5 @@
 
-# AWS SAA-C03 Online Mock Test - README
+# AWS SAA-C03 Online Mock Test
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
