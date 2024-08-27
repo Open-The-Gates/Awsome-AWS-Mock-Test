@@ -1,0 +1,68 @@
+.card-test {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  backdrop-filter: blur(
+    10px
+  ); /* Optional: Adds a blur effect behind the card */
+}
+
+.card-answer {
+  border-radius: 15px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  backdrop-filter: blur(
+    10px
+  );
+  vertical-align: middle;
+  color: aliceblue;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+}
+
+
+.question {
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+}
+
+.options {
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: contain;
+  position: absolute;
+  left: 48%;
+  bottom:15%;
+  display: block;
+  opacity: 0; /* Initially hidden */
+  animation: slideAndFade 2s ease-out forwards;
+}
+
+@keyframes slideAndFade {
+
+    0% {
+        opacity: 1;
+        transform:  translateY(0); /* End position (visible) */
+      }
+    20% {
+        opacity: 1;
+        transform:  translateY(0); /* End position (visible) */
+      }
+    80% {
+      opacity: 1;
+      transform:translateY(0); /* Stay visible for a while */
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100px); /* Slide down and disappear */
+    }
+  }

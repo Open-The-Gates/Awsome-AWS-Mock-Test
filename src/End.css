@@ -1,0 +1,14 @@
+.text-end {
+    font-family: "Dosis", sans-serif;
+    font-size: 1.5rem;
+    color: aliceblue;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-color: black;
+    opacity: 0.3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
+    z-index: 1000; 
+    border-radius: 20px;
+}
