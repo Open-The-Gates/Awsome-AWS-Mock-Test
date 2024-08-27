@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AWS SAA-C03 Online Mock Test - README
 
-## Available Scripts
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Awesome](https://img.shields.io/badge/awesome-%F0%9F%98%8E-pink)
 
-In the project directory, you can run:
+## Overview 📖
+This project is a custom React-based online mock test designed to help you prepare for the AWS Certified Solutions Architect - Associate (SAA-C03) exam. The mock test simulates the real exam experience, providing a wide range of questions covering essential AWS services and architectural best practices.
 
-### `npm start`
+## Features 🚀
+- **Comprehensive Question Set**: Includes questions on key topics such as compute, storage, networking, security, and cost optimization.
+- **Realistic Exam Simulation**: Questions are structured to mimic the format and difficulty level of the actual SAA-C03 exam.
+- **Instant Feedback**: Get immediate feedback with detailed explanations for each question, helping you to understand the correct answers.
+- **Performance Tracking**: Track your progress and identify areas for improvement.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation 🛠️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/aws-saa-c03-mock-test.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd aws-saa-c03-mock-test
+   ```
+3. Install the required dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm test`
+## Usage 🚀
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open your browser and navigate to `http://localhost:3000` to access the mock test.
+3. Answer the questions, review the feedback provided after each one, and monitor your overall performance at the end of the test.
 
-### `npm run build`
+## Requirements 📋
+- Node.js (v14 or later)
+- npm (v6 or later)
+- React (v17 or later)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing 🤝
+Contributions are welcome! Fork the repository, create a new branch, make your changes, and submit a pull request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License 📄
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Support 💬
+If you encounter any issues or have any questions, feel free to open an issue in the repository or contact the project maintainers.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Good luck with your AWS certification journey! 🚀
