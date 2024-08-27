@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Awsome-AWS-Mock-Test/static/css/main.60e61c6d.css",
+    "main.js": "/Awsome-AWS-Mock-Test/static/js/main.5e9a6adc.js",
+    "static/js/453.044cfbfa.chunk.js": "/Awsome-AWS-Mock-Test/static/js/453.044cfbfa.chunk.js",
+    "static/media/gradient-7258997_1920.png": "/Awsome-AWS-Mock-Test/static/media/gradient-7258997_1920.41df130d964645c6ce63.png",
+    "index.html": "/Awsome-AWS-Mock-Test/index.html",
+    "main.60e61c6d.css.map": "/Awsome-AWS-Mock-Test/static/css/main.60e61c6d.css.map",
+    "main.5e9a6adc.js.map": "/Awsome-AWS-Mock-Test/static/js/main.5e9a6adc.js.map",
+    "453.044cfbfa.chunk.js.map": "/Awsome-AWS-Mock-Test/static/js/453.044cfbfa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60e61c6d.css",
+    "static/js/main.5e9a6adc.js"
+  ]
+}
