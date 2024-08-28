@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Awsome-AWS-Mock-Test/static/css/main.ab6f2523.css",
-    "main.js": "/Awsome-AWS-Mock-Test/static/js/main.0d8bc7a2.js",
+    "main.js": "/Awsome-AWS-Mock-Test/static/js/main.8222dd87.js",
     "static/js/453.044cfbfa.chunk.js": "/Awsome-AWS-Mock-Test/static/js/453.044cfbfa.chunk.js",
     "static/media/gradient-7258997_1920.png": "/Awsome-AWS-Mock-Test/static/media/gradient-7258997_1920.41df130d964645c6ce63.png",
     "static/media/astronaut.png": "/Awsome-AWS-Mock-Test/static/media/astronaut.62f6527f0fc7babd9bbb.png",
@@ -10,11 +10,11 @@
     "static/media/cancel.png": "/Awsome-AWS-Mock-Test/static/media/cancel.1c2963ee3467352a1681.png",
     "index.html": "/Awsome-AWS-Mock-Test/index.html",
     "main.ab6f2523.css.map": "/Awsome-AWS-Mock-Test/static/css/main.ab6f2523.css.map",
-    "main.0d8bc7a2.js.map": "/Awsome-AWS-Mock-Test/static/js/main.0d8bc7a2.js.map",
+    "main.8222dd87.js.map": "/Awsome-AWS-Mock-Test/static/js/main.8222dd87.js.map",
     "453.044cfbfa.chunk.js.map": "/Awsome-AWS-Mock-Test/static/js/453.044cfbfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab6f2523.css",
-    "static/js/main.0d8bc7a2.js"
+    "static/js/main.8222dd87.js"
   ]
 }
