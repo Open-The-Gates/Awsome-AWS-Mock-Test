@@ -4,7 +4,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { pink, green } from "@mui/material/colors";
 import check from "./check.png";
 import cancel from "./cancel.png";
@@ -92,7 +92,7 @@ const Test = ({ onClick, nQuestions, questionList, shuffleQuestions, state }) =>
           }}
         >
           <LinearProgressWithLabel
-            value={((nQuestions - questionList.length) / nQuestions) * 100}
+            value={((nQuestions - questionList.length) / nQuestions) * 100} sx = {{color:"white"}}
           />
         </Box>{" "}
         <div className="row justify-content-center">
@@ -201,7 +201,7 @@ function LinearProgressWithLabel(props) {
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box sx={{ minWidth: 35 }}>
-        <Typography variant="body2" color="text.secondary">{`${Math.round(
+        <Typography variant="body2" color="white">{`${Math.round(
           props.value
         )}%`}</Typography>
       </Box>
