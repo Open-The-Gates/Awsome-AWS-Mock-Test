@@ -1,4 +1,4 @@
-.text-end {
+.finishing-text {
     font-family: "Dosis", sans-serif;
     font-size: 1.5rem;
     color: aliceblue;
@@ -11,4 +11,5 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow for better visibility */
     z-index: 1000; 
     border-radius: 20px;
+    text-align: center;
 }

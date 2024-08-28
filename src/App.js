@@ -1,5 +1,6 @@
 import React, { useReducer, useState, useEffect } from "react";
 import { reducer, initialState, actionTypes } from "./TestReducer";
+import questions from "./aws";
 
 import "./App.css";
 
@@ -18,18 +19,9 @@ function App() {
   useEffect(() => {
     // Function to fetch data
     const fetchData = async () => {
-      try {
-        const response = await fetch("/aws.json");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setTotalQuestionList(data.questions);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        console.log(questionList);
-      }
+      setTotalQuestionList(questions);
+      console.log(questions);
+      console.log(questionList);
     };
 
     fetchData();
@@ -39,6 +31,9 @@ function App() {
     if (totalQuestionList.length > 0) {
       setQuestionList(shuffle(totalQuestionList).slice(0, nQuestions));
     }
+  };
+  const shuffleQuestions = () => {
+      setQuestionList(shuffle(questionList));
   };
 
   // Function to handle starting the test
@@ -80,6 +75,7 @@ function App() {
             onClick={endTest}
             nQuestions={nQuestions}
             questionList={questionList}
+            shuffleQuestions={shuffleQuestions}
             state={state}
           />
         );

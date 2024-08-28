@@ -1,6 +1,8 @@
 import "./Intro.css";
 import { Button } from "@mui/material";
 import { motion } from "framer-motion";
+import logo from './Webinar-bro.svg'; // Tell webpack this JS file uses this image
+
 
 const Intro = ({ onClick }) => {
   return (
@@ -57,7 +59,7 @@ const Intro = ({ onClick }) => {
           }}
         >
           {" "}
-          <img src="/Webinar-bro.svg" alt="Developer Learning AWS" />
+          <img src={logo} alt="Developer Learning AWS" />
         </motion.div>
       </div>
     </div>

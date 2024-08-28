@@ -5,13 +5,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { pink } from "@mui/material/colors";
+import { pink, green } from "@mui/material/colors";
+import check from "./check.png";
+import cancel from "./cancel.png";
 
 import { createTheme, ThemeProvider } from "@mui/material";
 
 import "./Test.css";
 
-const Test = ({ onClick, nQuestions, questionList, state }) => {
+const Test = ({ onClick, nQuestions, questionList, shuffleQuestions, state }) => {
   const [checked, setChecked] = useState([false]);
   const [question, setQuestion] = useState(
     questionList[Math.floor(Math.random() * questionList.length)]
@@ -23,7 +25,7 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
   const theme = createTheme({
     typography: {
       fontFamily: '"Nunito", sans-serif',
-      fontSize: 16,
+      fontSize: 14.5,
     },
   });
 
@@ -37,6 +39,9 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
     const isRight =
       JSON.stringify(question.answerId) === JSON.stringify(finalAnswers);
     setRight(isRight);
+    if (!isRight) {
+      shuffleQuestions();
+    }
     console.log("Right Update : " + isRight);
   }, [finalAnswers, questionList, questionAnswered]);
 
@@ -75,9 +80,20 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
     return (
       <div className="container">
         <Box
-          sx={{ width: "70%", margin : "0 auto" ,position: "absolute", left: 0, right: 0, margin: "auto", display: "block", top: 0 }}
+          sx={{
+            width: "70%",
+            margin: "0 auto",
+            position: "absolute",
+            left: 0,
+            right: 0,
+            margin: "auto",
+            display: "block",
+            top: 0,
+          }}
         >
-          <LinearProgressWithLabel value={((nQuestions - questionList.length) / nQuestions) * 100} />
+          <LinearProgressWithLabel
+            value={((nQuestions - questionList.length) / nQuestions) * 100}
+          />
         </Box>{" "}
         <div className="row justify-content-center">
           <motion.div
@@ -85,54 +101,61 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            style={{placeItems: "center",  display: "flex", justifyContent: "center", alignItems: "center"}}
+            style={{
+              placeItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            {" "}<div>
-            <div className="question">{question.text}</div>
-            <div className="options">
-              {question.options.map((option, index) => (
-                <div style={{ textAlign: "left" }}>
-                  <ThemeProvider theme={theme}>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          checked={checkedOptions.includes(index)}
-                          onChange={() => handleCheck(index)}
-                          sx={{
-                            color:
-                              checked &&
-                              finalAnswers.includes(index) &&
-                              !question.answerId.includes(index)
-                                ? pink[800]
-                                : checked && question.answerId.includes(index)
-                                ? "#33eb91"
-                                : "inherit", // default color when not checked or doesn't match the condition
-                            "&.Mui-checked": {
+            {" "}
+            <div>
+              <div className="question">{question.text}</div>
+              <div className="options">
+                {question.options.map((option, index) => (
+                  <div style={{ textAlign: "left" }}>
+                    <ThemeProvider theme={theme}>
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            checked={checkedOptions.includes(index)}
+                            onChange={() => handleCheck(index)}
+                            sx={{
                               color:
                                 checked &&
                                 finalAnswers.includes(index) &&
                                 !question.answerId.includes(index)
-                                  ? pink[600]
+                                  ? pink[800]
                                   : checked && question.answerId.includes(index)
-                                  ? "##33eb91"
-                                  : "inherit", // checked color
-                            },
-                          }}
-                        />
-                      }
-                      label={option}
-                    />
-                  </ThemeProvider>
-                </div>
-              ))}
-            </div>
-            {checked && <Button onClick={onNextClicked}>Next</Button>}
-            {!checked && <Button onClick={onCheckClicked}>Check</Button>}
+                                  ? green[900]
+                                  : "inherit", // default color when not checked or doesn't match the condition
+                              "&.Mui-checked": {
+                                color:
+                                  checked &&
+                                  finalAnswers.includes(index) &&
+                                  !question.answerId.includes(index)
+                                    ? pink[600]
+                                    : checked &&
+                                      question.answerId.includes(index)
+                                    ? green[900]
+                                    : "inherit", // checked color
+                              },
+                            }}
+                          />
+                        }
+                        label={option}
+                      />
+                    </ThemeProvider>
+                  </div>
+                ))}
+              </div>
+              {checked && <Button onClick={onNextClicked}>Next</Button>}
+              {!checked && <Button onClick={onCheckClicked}>Check</Button>}
             </div>
           </motion.div>
           {checked && (
             <>
-              <div className="col-1"></div>
+              <div className="col-md-1"></div>
               <motion.div
                 className="card-answer col-10 col-md-4 d-flex justify-content-center align-items-center"
                 style={{
@@ -153,9 +176,7 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
           <motion.div
             className="box"
             style={{
-              backgroundImage: right
-                ? 'url("/check.png")'
-                : 'url("/cancel.png")',
+              backgroundImage: right ? `url(${check})` : `url(${cancel})`, 
             }}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -174,27 +195,26 @@ const Test = ({ onClick, nQuestions, questionList, state }) => {
 };
 
 function LinearProgressWithLabel(props) {
-    return (
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Box sx={{ width: '100%', mr: 1 }}>
-          <LinearProgress variant="determinate" {...props} />
-        </Box>
-        <Box sx={{ minWidth: 35 }}>
-          <Typography variant="body2" color="text.secondary">{`${Math.round(
-            props.value,
-          )}%`}</Typography>
-        </Box>
+  return (
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ width: "100%", mr: 1 }}>
+        <LinearProgress variant="determinate" {...props} />
       </Box>
-    );
-  }
-  
-  LinearProgressWithLabel.propTypes = {
-    /**
-     * The value of the progress indicator for the determinate and buffer variants.
-     * Value between 0 and 100.
-     */
-    value: PropTypes.number.isRequired,
-  };
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" color="text.secondary">{`${Math.round(
+          props.value
+        )}%`}</Typography>
+      </Box>
+    </Box>
+  );
+}
 
+LinearProgressWithLabel.propTypes = {
+  /**
+   * The value of the progress indicator for the determinate and buffer variants.
+   * Value between 0 and 100.
+   */
+  value: PropTypes.number.isRequired,
+};
 
 export default Test;

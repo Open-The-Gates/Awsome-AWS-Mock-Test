@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import "./End.css";
+import astronaut from "./astronaut.png"
 
 
 const End = ({ onClick }) => {
@@ -7,12 +8,12 @@ const End = ({ onClick }) => {
     <div>
       <div className="astronaut">
         <img
-          src="/astronaut.png"
+          src={astronaut}
           style={{ height: "50vh" }}
           alt="Developer Advancing AWS"
         />
       </div>
-      <div className="text-end">
+      <div className="finishing-text">
         Great job! Keep up the momentum and ace the real test!
       </div>
       <Button
