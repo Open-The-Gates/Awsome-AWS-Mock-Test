@@ -43,10 +43,9 @@ const Prep = ({ onClick, setNQuestions, nQuestions}) => {
                 label="Number Of Questions"
                 onChange={handleChange}
               >
-                <MenuItem value={1}>1</MenuItem>
-                <MenuItem value={10}>10</MenuItem>
-                <MenuItem value={20}>20</MenuItem>
-                <MenuItem value={30}>30</MenuItem>
+                <MenuItem value={10}>10 Q. Ideal For Learning</MenuItem>
+                <MenuItem value={30}>30 Q. Balanced Learning and Practice</MenuItem>
+                <MenuItem value={50}>50 Q. Ideal For Practice</MenuItem>
               </Select>
             </FormControl>
           </div>
