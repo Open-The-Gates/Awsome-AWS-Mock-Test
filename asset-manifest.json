@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Interstellar-AWS-SAA-C03/static/css/main.dfacc824.css",
+    "main.css": "/Interstellar-AWS-SAA-C03/static/css/main.03f03e3d.css",
     "main.js": "/Interstellar-AWS-SAA-C03/static/js/main.1945af03.js",
     "static/js/453.044cfbfa.chunk.js": "/Interstellar-AWS-SAA-C03/static/js/453.044cfbfa.chunk.js",
     "static/media/gradient-7258997_1920.png": "/Interstellar-AWS-SAA-C03/static/media/gradient-7258997_1920.41df130d964645c6ce63.png",
@@ -9,12 +9,12 @@
     "static/media/check.png": "/Interstellar-AWS-SAA-C03/static/media/check.0d7a9d0339b5f1aa3025.png",
     "static/media/cancel.png": "/Interstellar-AWS-SAA-C03/static/media/cancel.1c2963ee3467352a1681.png",
     "index.html": "/Interstellar-AWS-SAA-C03/index.html",
-    "main.dfacc824.css.map": "/Interstellar-AWS-SAA-C03/static/css/main.dfacc824.css.map",
+    "main.03f03e3d.css.map": "/Interstellar-AWS-SAA-C03/static/css/main.03f03e3d.css.map",
     "main.1945af03.js.map": "/Interstellar-AWS-SAA-C03/static/js/main.1945af03.js.map",
     "453.044cfbfa.chunk.js.map": "/Interstellar-AWS-SAA-C03/static/js/453.044cfbfa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfacc824.css",
+    "static/css/main.03f03e3d.css",
     "static/js/main.1945af03.js"
   ]
 }
