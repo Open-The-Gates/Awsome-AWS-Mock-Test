@@ -1,3 +1,7 @@
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .App-content {
   padding: 10vh 0vh;
 }
@@ -19,6 +23,18 @@
   text-align: left;
 }
 
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .App-title {
     font-size: 2rem;
@@ -32,4 +48,11 @@
 
   }
   
+}
+
+
+img {
+  
+  animation: floating 3s ease infinite;
+  will-change: transform;
 }

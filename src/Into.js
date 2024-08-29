@@ -45,6 +45,9 @@ const Intro = ({ onClick }) => {
           class="col-12 col-md-6"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
+          style={{ display:"flex",
+            alignItems: "center",
+                     }}
           transition={{
             duration: 0.1,
             ease: [0, 0.71, 0.2, 1.01],
@@ -57,7 +60,7 @@ const Intro = ({ onClick }) => {
           }}
         >
           {" "}
-          <img src={logo} alt="Developer Learning AWS" />
+          <img src={logo} style={{ height: "auto" , width: "100%" }} alt="Developer Learning AWS" />
         </motion.div>
       </div>
     </div>
