@@ -1368,7 +1368,7 @@ const questions = [
       "Amazon S3 supports the BitTorrent protocol, but the size limit for objects is 100 GB. This ensures efficient distribution of large files.",
   },
   {
-    question:
+    text:
       "You want to establish a dedicated network connection from your premises to AWS in order to save money by transferring data directly to AWS rather than through your internet service provider. You are sure there must be some other benefits beyond cost savings. Which of the following statements would be the best choice to put your client's mind at rest?",
     options: [
       "Different instances running on the same physical machine are isolated from each other via a 256-bit Advanced Encryption Standard (AES-256).",
@@ -1383,7 +1383,7 @@ const questions = [
       "The Xen hypervisor is responsible for securely isolating instances on the same physical host, ensuring that one instance cannot interfere with another. While AES-256 encryption is robust, it's typically used for data encryption, not instance isolation. IAM permissions manage user access but do not isolate instances on a physical machine.",
   },
   {
-    question:
+    text:
       "Can I detach the primary (eth0) network interface when the instance is running or stopped?",
     options: ["Yes, You can.", "No. You cannot."],
     answerId: [1],
@@ -1392,7 +1392,7 @@ const questions = [
       "The primary network interface (eth0) is critical for the instance's communication. Detaching it would disrupt network connectivity, which is why AWS does not allow this operation. Allowing it could lead to accidental loss of connectivity, impacting instance functionality.",
   },
   {
-    question:
+    text:
       "You have launched an Amazon Elastic Compute Cloud (EC2) instance into a public subnet with a primary private IP address assigned, an internet gateway is attached to the VPC, and the public route table is configured to send all Internet-based traffic to the Internet gateway. The instance security group is set to allow all outbound traffic but cannot access the internet. Why is the Internet unreachable from this instance?",
     options: [
       "The instance does not have a public IP address.",
@@ -1406,7 +1406,7 @@ const questions = [
       "For an EC2 instance in a public subnet to access the internet, it needs a public IP address. Without it, the instance cannot communicate with external internet resources, even though the subnet is properly configured and the security group allows outbound traffic. The other options are incorrect because the security group already allows outbound traffic, inbound traffic is not needed for outbound communication, and the 'Source/Destination check' does not affect internet access in this scenario.",
   },
   {
-    question:
+    text:
       "Which of the following statements best describes the differences between Elastic Beanstalk and CloudFormation?",
     options: [
       "Elastic Beanstalk uses Elastic load balancing and CloudFormation doesn't.",
@@ -1421,8 +1421,7 @@ const questions = [
       "CloudFormation allows for more granular control over AWS resources, enabling custom templates and the use of custom scripts, making it more powerful than Elastic Beanstalk. Elastic Beanstalk is easier and quicker for deploying simple applications, but it does not offer the same level of customization and control. The options related to Elastic Load Balancing and deployment speed are inaccurate comparisons in this context.",
   },
   {
-    question:
-      "It is advised that you watch the Amazon CloudWatch [...] metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.",
+    text: "It is advised that you watch the Amazon CloudWatch [...] metric (available via the AWS Management Console or Amazon Cloud Watch APIs) carefully and recreate the Read Replica should it fall behind due to replication errors.",
     options: ["Write Lag.", "Read Replica.", "Replica Lag.", "Single Replica."],
     answerId: [2],
     answer: "Replica Lag.",
@@ -1430,7 +1429,7 @@ const questions = [
       "Replica Lag is the correct metric to monitor in CloudWatch to ensure that the read replica is not falling behind the primary database due to replication delays. 'Write Lag' is not a relevant metric, and 'Read Replica' and 'Single Replica' are not actual CloudWatch metrics.",
   },
   {
-    question:
+    text:
       "Your application provides data transformation services. Files containing data to be transformed are first uploaded to Amazon S3 and then transformed by a fleet of spot EC2 instances. Files submitted by your premium customers must be transformed with the highest priority. How should you implement such a system?",
     options: [
       "Use a DynamoDB table with an attribute defining the priority level. Transformation instances will scan the table for tasks, sorting the results by priority level.",
@@ -1445,7 +1444,7 @@ const questions = [
       "Using two SQS queues is the best approach to prioritize tasks because it allows for clear separation and easy prioritization of messages. Instances can focus on high-priority tasks first, ensuring that premium customers' requests are handled promptly. The other methods either lack the ability to efficiently prioritize tasks or introduce unnecessary complexity.",
   },
   {
-    question:
+    text:
       "True or False: When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes.",
     options: [
       "Depends on the instance type.",
@@ -1459,7 +1458,7 @@ const questions = [
       "Block device mapping for an instance shows only EBS volumes because they are persistent storage options, whereas instance store volumes are ephemeral and are not included in the block device mapping by default. This ensures clarity in managing persistent storage resources.",
   },
   {
-    question: "Does AWS CloudFormation support Amazon EC2 tagging?",
+    text: "Does AWS CloudFormation support Amazon EC2 tagging?",
     options: [
       "Yes, AWS CloudFormation supports Amazon EC2 tagging.",
       "No, CloudFormation doesn't support any tagging.",
@@ -1472,7 +1471,7 @@ const questions = [
       "AWS CloudFormation does support Amazon EC2 tagging, allowing users to manage and organize their resources efficiently. The other options are incorrect because tagging is a well-supported feature in CloudFormation, helping in resource management and cost allocation.",
   },
   {
-    question:
+    text:
       "If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect?",
     options: ["Yes.", "No."],
     answerId: [0],
@@ -1481,7 +1480,7 @@ const questions = [
       "Rebooting the instance is necessary for the changes in the DB parameter group to take effect because it ensures that the new parameters are applied to the DB instance. Without a reboot, the instance might continue operating with the old settings.",
   },
   {
-    question:
+    text:
       "If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines, you can scale the throughput of your database Instance by specifying the IOPS rate from [...].",
     options: [
       "1,000 to 100,000.",
@@ -1495,7 +1494,7 @@ const questions = [
       "The IOPS rate for RDS Provisioned IOPS storage ranges from 1,000 to 10,000, allowing you to scale your database's throughput according to your needs. The other options either overestimate or underestimate the possible range for IOPS, making them incorrect.",
   },
   {
-    question:
+    text:
       "To specify a resource in a policy statement, in Amazon EC2, can you use its Amazon Resource Name (ARN)?",
     options: [
       "Yes, you can.",
