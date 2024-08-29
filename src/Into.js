@@ -18,12 +18,10 @@ const Intro = ({ onClick }) => {
         >
           <div className="App-content">
             <div className="App-title">
-              Prepare Like a Pro: AWS SAA-C03 Mock Test for Success
+            Launch to Success: AWS SAA-C03 Rocket Training Mock Test
             </div>
             <div className="App-description">
-              Boost your confidence and prepare thoroughly with our AWS SAA-C03
-              mock test, offering realistic questions and instant feedback to
-              refine your skills.
+            Gear up for your interstellar AWS journey with our AWS SAA-C03 mock test. Navigate through a galaxy of realistic questions and receive instant feedback to fine-tune your skills and ensure you're mission-ready.
             </div>
             <Button
               sx={{
