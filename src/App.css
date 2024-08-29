@@ -18,6 +18,7 @@
 
 .App-header {
   background-image: url("/public/gradient-7258997_1920.png");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
